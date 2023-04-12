@@ -1,0 +1,217 @@
+:root {
+  --dark-blue-100: #609ed4;
+  --dark-blue-200: #355ea9;
+  --dark-blue-300: #0a3871;
+  --dark-blue-400: #072b61;
+  --dark-blue-500: #052051;
+  --light-blue-100: #f3f5fc;
+  --light-blue-200: #eff1fa;
+  --light-blue-300: #e9ecf8;
+  --light-blue-400: #aab2d5;
+  --light-blue-500: #757fb2;
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #868e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
+  --alert: #f00;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light-blue-100);
+  color: var(--dark-blue-300);
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top {
+  grid-area: header;
+}
+
+.input {
+  grid-area: main;
+}
+
+.warn {
+  grid-area: alert;
+}
+
+.btn-a {
+  grid-area: event-a;
+}
+
+.btn-b {
+  grid-area: event-b;
+}
+
+.sidebar {
+  grid-area: aside;
+}
+
+.bottom {
+  grid-area: footer;
+  place-self: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0fr 4fr 0fr 0fr 0fr;
+  grid-template-areas:
+    "header header aside"
+    "main main aside"
+    "alert alert aside"
+    "event-a event-b aside"
+    "footer footer footer";
+  grid-gap: 5px 40px;
+  margin: 40px 0 0;
+}
+
+header > .logo {
+  background: transparent url("logo.png") no-repeat scroll 0% 0%;
+  width: 32px;
+  height: 48px;
+  text-indent: -3333px;
+  border: 0;
+  margin: 0;
+}
+
+header > .logo a {
+  display: block;
+  width: 48px;
+  height: 64px;
+  text-decoration: none;
+  border: 0;
+}
+
+main {
+  width: 100%;
+}
+
+main > #entrada,
+textarea {
+  width: 100%;
+  min-height: 500px;
+  margin: 90px 0 20px;
+  background: none;
+  border: none;
+  font-family: "Inter";
+}
+
+main > #entrada, textarea, aside {
+font-weight: 400;
+font-size: 32px;
+line-height: 1.5em;
+color: var(--dark-blue-300);
+}
+
+main > #entrada,
+textarea:focus {
+  outline: none;
+}
+
+main > #entrada,
+textarea::placeholder {
+  color: var(--dark-blue-300);
+}
+
+button {
+  padding: 24px 64px;
+  border: none;
+  border-radius: 24px;
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 1.5em;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.alerta {
+  color: var(--gray-400);
+  font-size: 12px;
+  line-height: 18px;
+  padding-bottom: 11px;
+}
+
+.icon::before {
+  content: "\f06a";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-size: 16px;
+  font-variant: normal;
+  font-weight: 900;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+#criptografar {
+  background-color: var(--dark-blue-300);
+  color: var(--white);
+}
+
+#criptografar:hover {
+  background-color: var(--dark-blue-500);
+  transition: all 0.3s ease-in-out;
+}
+
+#descriptografar {
+  background-color: var(--light-blue-300);
+  border: 1px solid var(--dark-blue-300);
+  color: var(--dark-blue-300);
+}
+
+#descriptografar:hover {
+  background-color: var(--gray-100);
+  transition: all 0.3s ease-in-out;
+}
+
+aside {
+  width: 100%;
+  height: auto;
+  padding: 20px 20px;
+  background-color: var(--white);
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px -8px var(--gray400);
+}
+
+aside > img {
+  margin: 120px auto 0;
+  width: 100%;
+  height: auto;
+}
+
+aside > h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  margin: 26px 0 16px;
+  color: var(--gray-500);
+}
+
+aside > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--gray-400);
+}
+
+footer {
+  margin-top: 80px;
+}

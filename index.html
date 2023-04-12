@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decodificador de texto - Challenge ONE</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <header class="top">
+          <h1 class="logo"><a href="/">Decodificador de texto</a></h1>
+        </header>
+        <main class="input">
+          <textarea
+            name="entrada"
+            id="entrada"
+            placeholder="Digite seu texto"
+          ></textarea>
+        </main>
+        <section class="alerta warn">
+          <span class="icon"></span> Apenas letras minúsculas e sem
+          acento.
+        </section>
+        <button id="criptografar" class="btn-a">Criptografar</button>
+        <button id="descriptografar" class="btn-b">Descriptografar</button>
+        <aside id="saida" class="sidebar">
+          <img src="Ilustração.png" alt="">
+          <h2>Nenhuma mensagem encontrada</h2>
+          <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+        </aside>
+        <footer class="bottom">
+          <p>
+            Desenvolvido com ❤️ por
+            <a
+              href="https://rafaeletc.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Rafael de Lima Franco</a
+            >
+          </p>
+        </footer>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
